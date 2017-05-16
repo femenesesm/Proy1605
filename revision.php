@@ -1,9 +1,18 @@
 <?php
-var_dump($_SESSION); //var dump = imprime todo lo que tenga una variable
+$PATH='lib/';
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+include $PATH. 'Conexion.php';
+include $PATH. 'usuario.php';
+
+$oUsr=new usuario();
+
+$oUsr-> nombre='flopez';
+
+if($$oUsr->VerificaUsuario())
+    echo "Existe";
+else
+    echo "NoExiste";
+
+//session_start();
+//var_dump($_SESSION);
 
