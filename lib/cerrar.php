@@ -1,5 +1,6 @@
 <?php
 
-session_unset();
+session_start();
+session_destroy();
 header('Location:http://localhost:8081/proy1605/');
 
